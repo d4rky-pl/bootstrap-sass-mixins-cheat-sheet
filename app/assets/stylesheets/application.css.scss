@@ -1,0 +1,17 @@
+@import 'bootstrap';
+@import 'sticky';
+
+.container h3:first-child {
+  margin-top: 0
+}
+
+.table-mixins {
+  .line {
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+
+#footer p {
+  margin: 20px 0;
+}

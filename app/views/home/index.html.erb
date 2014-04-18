@@ -1,0 +1,15 @@
+<div class="container">
+  <% json[:mixins].each do |filename, mixins| %>
+    <h3><%= filename %></h3>
+    <table class="table table-striped table-bordered table-mixins">
+    <% mixins.each do |mixin| %>
+      <tr>
+        <td class="line"><%= mixin[:line] %></td>
+        <td class="file"><a href="<%= url %>/vendor/assets/stylesheets/<%= mixin[:filename] %>#L<%= mixin[:line] %>"><%= mixin[:content] %></a></td>
+      </tr>
+    <% end %>
+    </table>
+  <% end %>
+
+  <p class="text-center text-muted"><%= DateTime.parse(json[:generated_at]).strftime('Generated %d %B %Y on %H:%M') %></p>
+</div>
