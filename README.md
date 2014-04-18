@@ -9,6 +9,13 @@ rake mixins:generate
 
 Feel free to send pull requests if you find anything you'd like to change!
 
+# TODO
+
+- syntax highlighting, so it's easier to tell apart between mixin name and it's parameters
+- probably some kind of simple SCSS parsers so I can embed code directly instead of linking to GH
+- probably a nicer layout, this one is too simplistic and takes too much space (harder to print)
+- you tell me :)
+
 # Licence
 
 The MIT License (MIT)
