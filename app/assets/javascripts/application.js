@@ -19,8 +19,8 @@ $(function() {
 
   var parser = function(text) {
     text = text.replace(/^([^\(]*)+/, '<span class="mixin-name">$1</span>');
-    text = text.replace(/\$([^:,\) ]+)/g, '<span class="variable-name">$1</span>');
     text = text.replace(/(:\s*)([^,\)]+)/g, '$1<span class="default-value">$2</span>');
+    text = text.replace(/([^>]\$([^:,\) ]+))/g, '<span class="variable-name">$1</span>');
     return text;
   };
 
