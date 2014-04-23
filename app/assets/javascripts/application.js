@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+  var parser = function(text) {
+    text = text.replace(/^([^\(]*)+/, '<span class="mixin-name">$1</span>');
+    text = text.replace(/\$([^:,\) ]+)/g, '<span class="variable-name">$1</span>');
+    text = text.replace(/(:\s*)([^,\)]+)/g, '$1<span class="default-value">$2</span>');
+    return text;
+  };
+
+  $(".table-mixins td.file > a").each(function() {
+    var $this = $(this);
+    $this.html(parser($this.html()));
+  });
+});

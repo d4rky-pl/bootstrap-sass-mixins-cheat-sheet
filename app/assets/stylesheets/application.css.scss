@@ -10,6 +10,18 @@
     width: 1px;
     white-space: nowrap;
   }
+  .file > a {
+    color: black;
+    .mixin-name {
+      color: $brand-primary;
+    }
+    .variable-name {
+      color: $brand-success;
+    }
+    .default-value {
+      color: $brand-warning;
+    }
+  }
 }
 
 #footer p {
