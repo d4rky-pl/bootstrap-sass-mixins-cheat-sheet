@@ -4,7 +4,7 @@
   <% mixins.each do |mixin| %>
     <tr>
       <td class="line"><%= mixin[:line] %></td>
-      <td class="file"><a href="<%= url %>/vendor/assets/stylesheets/<%= mixin[:filename] %>#L<%= mixin[:line] %>"><%= mixin[:content] %></a></td>
+      <td class="file"><a href="<%= url %>/assets/stylesheets/<%= mixin[:filename] %>#L<%= mixin[:line] %>"><%= mixin[:content] %></a></td>
     </tr>
   <% end %>
   </table>
