@@ -23,7 +23,7 @@ namespace :mixins do
 
     gem_spec = Gem.loaded_specs['bootstrap-sass']
     gem_path = gem_spec.full_gem_path
-    assets_path = Pathname.new(File.join(gem_path, 'vendor', 'assets', 'stylesheets'))
+    assets_path = Pathname.new(File.join(gem_path, 'assets', 'stylesheets'))
     assets_files = Dir[File.join(assets_path, '**', '*.scss')]
 
     result = {
